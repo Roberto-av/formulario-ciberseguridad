@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Formulario</h2>
+      <div id="server-errors" class="server-messages error-messages"></div>
+      <div id="server-success" class="server-messages success-messages"></div>
+      <form
+        id="registration-form"
+        method="POST"
+        action="../back/process_form.php"
+      >
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese su nombre"
+            />
+            <div id="error-nombre" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="apellidos">Apellidos</label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              placeholder="Ingrese sus apellidos"
+            />
+            <div id="error-apellidos" class="error-message"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="direccion">Dirección</label>
+            <input
+              type="text"
+              id="direccion"
+              name="direccion"
+              placeholder="Ingrese su dirección"
+            />
+            <div id="error-direccion" class="error-message"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" />
+            <div id="error-ciudad" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="pais">País</label>
+            <input type="text" id="pais" name="pais" placeholder="País" />
+            <div id="error-pais" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Teléfono"
+            />
+            <div id="error-telefono" class="error-message"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ingrese su email"
+            />
+            <div id="error-email" class="error-message"></div>
+          </div>
+        </div>
+        <button type="submit">
+          <span>Enviar</span>
+        </button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
